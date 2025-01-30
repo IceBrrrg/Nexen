@@ -57,23 +57,58 @@ nav {
 nav ol {
     display: flex;
     list-style: none;
+    position: relative;
 }
 
 /*Adjust nav distance between links*/
 nav li {
     margin-right: 15px;
+
+}
+
+ol li {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3;
+}
+
+ol li:hover {
+    color: white;
+}
+
+ol li::before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0;
+    background: green;
+    scale: 0 1;
+    transition: 0.3, translate 0s 0.3s;
+}
+
+ol:hover li::before {
+    scale: 1;
+}
+
+ol li:hover::before {
+    translate: 0;
+    transition: 0.3s;
+}
+
+ol:hover li:has(~ li:hover)::before {
+    translate: 100% 0;
+    transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+
+ol:hover li:hover ~ li::before {
+    translate: -100% 0;
+    transition: 0.2s 0.2s, scale 0s 0.4s;
 }
 
 nav a {
     text-decoration: none;
     color: rgb(175, 167, 167);
     font-weight: 500;
-    transition: color 0.2s;
     position: relative;
-}
-
-nav a:hover {
-    color: rgb(255, 255, 255);
 }
 
 /*Carousel*/
