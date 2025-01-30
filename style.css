@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Default Spacing Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Source Sans 3", serif;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    height: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    margin-right: 50px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+/*Adjust sign in button*/
+.sign-in {
+    margin-left: auto;
+    margin-right: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+/*Adjust sidebar button*/
+.sidebar-button {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/*Adjust nav display*/
+nav {
+    display: flex;
+    justify-self: flex-start;
+    list-style: none;
+}
+
+/* Display navbar links horizontally */
+nav ol {
+    display: flex;
+    list-style: none;
+}
+
+/*Adjust nav distance between links*/
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(175, 167, 167);
+    font-weight: 500;
+    transition: color 0.2s;
+    position: relative;
+}
+
+nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/*Carousel*/
+.carousel-container {
+    height: 100vh;
+    width: 100vw;
+    margin-top: -50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container .container-wrapper .image-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.carousel-container .container-wrapper .image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-container .container-wrapper .image-slide .content {
+    position: absolute;
+    top: 40%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 20%;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 0 15px 10px black;
+}
+
+.carousel-container .container-wrapper .image-slide .subtitle {
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.carousel-container .container-wrapper .image-slide .title {
+    font-family: "Passion One", serif;
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: orange;
+}
+
+.carousel-container .container-wrapper .image-slide .content .description {
+    padding-left:3%;
+}
