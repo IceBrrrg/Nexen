@@ -76,12 +76,13 @@ ol li:hover {
     color: white;
 }
 
+/* hover problem */
 ol li::before {
     content: "";
     position: absolute;
     inset: calc(100% - 3px) 0 0 0;
     background: orange;
-    scale: 0 1;
+    scale: 0 1; /* when removed static scale */
     transition: 0.3, translate 0s 0.3s;
 }
 
@@ -128,8 +129,10 @@ nav a:hover {
 .carousel-container .container-wrapper .image-slide {
     width: 100%;
     height: 100%;
-    position: absolute;
-    inset: 0 0 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-container .container-wrapper .image-slide img {
@@ -140,7 +143,7 @@ nav a:hover {
 
 .carousel-container .container-wrapper .image-slide .content {
     position: absolute;
-    top: 40%;
+    top: 30%;
     width: 1140px;
     max-width: 80%;
     left: 50%;
@@ -167,5 +170,27 @@ nav a:hover {
 }
 
 .carousel-container .container-wrapper .image-slide .content .description {
+    padding-top: 20px;
     padding-left:3%;
+}
+
+.carousel-container .container-wrapper .image-slide .see-btn button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-container .container-wrapper .image-slide .see-btn {
+    padding-left: 2%;
+}
+
+ .carousel-container .container-wrapper .image-slide .see-btn button:hover {
+    background-color: orange;
+    color: white;
 }
